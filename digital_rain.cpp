@@ -45,7 +45,7 @@ int main()
 {
     // Initialise the micro:bit runtime.
     uBit.init();
-
+    uBit.display.setDisplayMode(DISPLAY_MODE_GREYSCALE); //per pixel brightness
     
     create_fiber(animate_raindrops_0);
     create_fiber(animate_raindrops_1);
@@ -58,4 +58,3 @@ int main()
     // sit in the idle task forever, in a power efficient sleep.
     release_fiber();
 }
-
